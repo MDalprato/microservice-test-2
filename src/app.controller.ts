@@ -8,12 +8,12 @@ import { IsString, IsEmail } from 'class-validator';
 export class AppController {
   constructor(private readonly appService: AppService) { }
 
-  @MessagePattern('getManipolatedName')
-  sum(data: any): any {
-    console.log(data);
+  @MessagePattern('getManipulatedAge')
+  sum(age: any): any {
+    console.log(age);
 
 
-    const text = "Your name is " + data.name + " and your surname is " + data.surname;
+    const text = "Your are old " + age +  " years " + " - I'm microservice 2";
     return text;
   }
 }
